@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Locations - Brew & Bloom</title>
+  <meta name="description" content="Locations, hours, and map per location" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --primary:#6F4E37; --bg:#F7F5F0; }
+    .reveal { opacity:0; transform: translateY(16px); transition: all 0.6s; }
+    .reveal.visible { opacity:1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-[#F7F5F0] text-[#1F1F1F]">
+  <!-- Header -->
+  <header class="glass w-full fixed top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="assets/images/branding/logo.png" alt="Logo" class="h-10 w-10 mr-3" />
+        <span class="font-semibold text-xl" style="color:var(--primary);">Brew & Bloom</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="index.html" class="text-[#1F1F1F]">Home</a>
+        <a href="menu.html" class="text-[#1F1F1F]">Menu</a>
+        <a href="locations.html" class="text-[#1F1F1F]">Locations</a>
+        <a href="online-ordering.html" class="text-[#1F1F1F]">Order</a>
+        <a href="gallery.html" class="text-[#1F1F1F]">Gallery</a>
+        <a href="contact.html" class="text-[#1F1F1F]">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-8">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <div class="mb-6">
+        <h1 class="text-3xl font-bold" style="color:var(--primary);">Locations & Hours</h1>
+        <p class="text-sm text-[#5C5C5C]">Find a Brew & Bloom near you. Updated hours and holiday notices.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Location Card 1 -->
+        <section class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300">
+          <h3 class="font-semibold">Downtown - Main Street</h3>
+          <p class="text-sm text-[#5C5C5C]">123 Main St, City</p>
+          <p class="text-sm mt-2">Hours: Mon-Sun 7am–7pm</p>
+          <div class="mt-2"><span class="text-xs bg-[#D8C1A3] px-2 py-1 rounded">Carryout</span></div>
+          <div class="mt-3">
+            <iframe src="https://www.google.com/maps?q=coffee+shop+downtown&output=embed" title="Map" width="100%" height="150" style="border:0; border-radius:12px;"></iframe>
+          </div>
+        </section>
+        <!-- Location Card 2 -->
+        <section class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300">
+          <h3 class="font-semibold">Riverside</h3>
+          <p class="text-sm text-[#5C5C5C]">45 River Ave, City</p>
+          <p class="text-sm mt-2">Hours: Mon-Sun 8am–6pm</p>
+        </section>
+        <!-- Location Card 3 -->
+        <section class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300">
+          <h3 class="font-semibold">Campus</h3>
+          <p class="text-sm text-[#5C5C5C]">University Park</p>
+          <p class="text-sm mt-2">Hours: Weekdays 7am–4pm</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white mt-12 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-sm text-[#5C5C5C]">© Brew & Bloom Coffee</div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
