@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Brew & Bloom</title>
+  <meta name="description" content="Photos of beverages, interiors, and events with a lightbox" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .reveal { opacity:0; transform: translateY(16px); transition: all 0.6s; }
+    .reveal.visible { opacity:1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-[#F7F5F0] text-[#1F1F1F]">
+  <!-- Header -->
+  <header class="glass w-full fixed top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="assets/images/branding/logo.png" alt="Logo" class="h-10 w-10 mr-3" />
+        <span class="font-semibold text-xl" style="color:var(--primary);">Brew & Bloom</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="index.html" class="text-[#1F1F1F]">Home</a>
+        <a href="menu.html" class="text-[#1F1F1F]">Menu</a>
+        <a href="locations.html" class="text-[#1F1F1F]">Locations</a>
+        <a href="online-ordering.html" class="text-[#1F1F1F]">Order</a>
+        <a href="gallery.html" class="text-[#1F1F1F]">Gallery</a>
+        <a href="contact.html" class="text-[#1F1F1F]">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-8">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <div class="mb-4">
+        <h1 class="text-3xl font-bold" style="color:var(--primary);">Gallery</h1>
+        <p class="text-sm text-[#5C5C5C]">Photo gallery of beverages, interiors, and events</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        ${['https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=800&auto=format&fit=crop','https://images.unsplash.com/photo-1526312426766-480f89b8b1b6?q=80&w=800&auto=format&fit=crop','https://images.unsplash.com/photo-1504754528036-3f35d9d9e6e1?q=80&w=800&auto=format&fit=crop','https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop','https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop','https://images.unsplash.com/photo-1543801469-310f7d3a2d84?q=80&w=800&auto=format&fit=crop','https://images.unsplash.com/photo-1511253166623-0f68e0c4e6f9?q=80&w=800&auto=format&fit=crop','https://images.unsplash.com/photo-1523419409548-9d5b2b5ed1d5?q=80&w=800&auto=format&fit=crop'] .map((src,i)=>`<div class="bg-white rounded-xl overflow-hidden shadow-md"><img src="${src}" alt="Gallery ${i+1}" class="w-full h-40 object-cover cursor-pointer" /></div>`).join('')}
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+    <img id="lightboxImg" src="" alt="Lightbox" class="max-w-full max-h-full rounded-xl" />
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white mt-12 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-sm text-[#5C5C5C]">© Brew & Bloom Coffee</div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Lightbox activation for gallery images
+    (function(){
+      const imgs = document.querySelectorAll('main .grid img');
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightboxImg');
+      imgs.forEach(img => img.addEventListener('click', ()=>{
+        lbImg.src = img.src;
+        lb.classList.remove('hidden');
+      }));
+      lb.addEventListener('click', ()=> lb.classList.add('hidden'));
+    })();
+  </script>
+</body>
+</html>
