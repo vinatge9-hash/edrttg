@@ -1,0 +1,11 @@
+/* Global styles for the project (Tailwind handles most layout) */
+:root {
+  --primary: #6F4E37;
+  --secondary: #D8C1A3;
+  --accent: #2EC4B6;
+  --bg: #F7F5F0;
+  --surface: #FFFFFF;
+  --text: #1F1F1F;
+  --textSecondary: #5C5C5C;
+}
+html, body { height: 100%; }
