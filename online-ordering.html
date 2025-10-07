@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Ordering - Brew & Bloom</title>
+  <meta name="description" content="Order items for pickup with location selection and pickup options" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --primary:#6F4E37; --bg:#F7F5F0; }
+  </style>
+</head>
+<body class="bg-[#F7F5F0] text-[#1F1F1F]">
+  <!-- Header -->
+  <header class="glass w-full fixed top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="assets/images/branding/logo.png" alt="Logo" class="h-10 w-10 mr-3" />
+        <span class="font-semibold text-xl" style="color:var(--primary);">Brew & Bloom</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="index.html" class="text-[#1F1F1F]">Home</a>
+        <a href="menu.html" class="text-[#1F1F1F]">Menu</a>
+        <a href="locations.html" class="text-[#1F1F1F]">Locations</a>
+        <a href="online-ordering.html" class="text-[#1F1F1F]">Order</a>
+        <a href="gallery.html" class="text-[#1F1F1F]">Gallery</a>
+        <a href="contact.html" class="text-[#1F1F1F]">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-8">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <div class="bg-white rounded-xl p-6 shadow-md">
+        <h1 class="text-3xl font-bold" style="color:var(--primary);">Online Ordering</h1>
+        <p class="text-sm text-[#5C5C5C] mt-2">Select location, add items to cart, and choose pickup time.</p>
+        <div class="mt-4 grid md:grid-cols-2 gap-6">
+          <div class="p-4 border rounded-lg bg-gray-50">
+            <label class="block text-sm mb-2">Location</label>
+            <select class="w-full border border-gray-300 rounded-lg p-2" id="locationSelect">
+              <option>Downtown - Main Street</option>
+              <option>Riverside</option>
+              <option>Campus</option>
+            </select>
+          </div>
+          <div class="p-4 border rounded-lg bg-gray-50">
+            <label class="block text-sm mb-2">Pickup Time</label>
+            <input type="time" class="w-full border border-gray-300 rounded-lg p-2" id="pickupTime" />
+          </div>
+        </div>
+        <div class="mt-4">
+          <button class="bg-[#6F4E37] text-white px-6 py-2 rounded-lg hover:bg-[#5a3a25] transition-all duration-300">Checkout</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white mt-12 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-sm text-[#5C5C5C]">© Brew & Bloom Coffee</div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
