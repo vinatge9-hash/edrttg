@@ -1,0 +1,8 @@
+[
+  {"id":1, "name":"Espresso", "category":"Coffee", "price":4.25, "desc":"Rich and bold", "img":"https://images.unsplash.com/photo-1495474472287-4bd2f3f8b777?q=80&w=800&auto=format&fit=crop"},
+  {"id":2, "name":"Cappuccino", "category":"Coffee", "price":4.75, "desc":"Silky and creamy", "img":"https://images.unsplash.com/photo-1526312426766-480f89b8b1b6?q=80&w=800&auto=format&fit=crop"},
+  {"id":3, "name":"Green Tea Latte", "category":"Tea", "price":4.50, "desc":"Herbal aroma with dairy", "img":"https://images.unsplash.com/photo-1526652672208-4936f249b2f9?q=80&w=800&auto=format&fit=crop"},
+  {"id":4, "name":"Blueberry Scone", "category":"Pastry", "price":3.50, "desc":"Buttery and fresh berries", "img":"https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?q=80&w=800&auto=format&fit=crop"},
+  {"id":5, "name":"Avocado Toast", "category":"Food", "price":6.50, "desc":"Sourdough with fresh avocado", "img":"https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=800&auto=format&fit=crop"},
+  {"id":6, "name":"Chocolate Croissant", "category":"Pastry", "price":3.75, "desc":"Flaky, filled with chocolate", "img":"https://images.unsplash.com/photo-1604908176996-1ddc338e1f6d?q=80&w=800&auto=format&fit=crop"}
+]
